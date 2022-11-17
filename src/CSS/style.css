@@ -1,0 +1,19 @@
+.cart:hover {
+    cursor: pointer;
+}
+
+.vision {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.productosLista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 2px 0px rgba(80, 80, 80, 1);
+}
