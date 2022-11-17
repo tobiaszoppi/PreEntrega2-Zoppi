@@ -1,11 +1,9 @@
-import Item from '../item/item.js';
+import React from 'react'
 
-const ItemList = ({products}) => {
+const ItemList = () => {
   return (
-    products?.map((product) => (
-        <Item product={product} ></Item>
-    ))
+    <div>ItemList</div>
   )
-};
+}
 
 export default ItemList

@@ -7,34 +7,40 @@ import { Link, NavLink } from 'react-router-dom'
 class NavComponent extends Component {
   render () {
     return (
-      <nav className='nav navbar navbar-expand-lg bg-white' height='10vh'>
+      <nav className='navbar navbar-expand-lg navbar-light bg-light'>
         <div className='container-fluid'>
-          <NavLink to='/' activeClassName="currentCategory" className="text-black">
-            <h1>TobiCompany</h1>
+          <NavLink to='/'>
+            <h3 className='navbar-brand'>
+              TobiShop
+            </h3>
           </NavLink>
-          <ul className='nav nav-tabs'>
-            <Link to='/'>
-              <li className='nav-item'>
-                <a className='nav-link active' aria-current='page' href=''>
-                  Inicio
-                </a>
-              </li>
-            </Link>
-            <Link to='Productos'>
-              <li className='nav-item'>
-                <a className='nav-link' href=''>Productos</a>
-              </li>
-            </Link>
-            <Link to='ItemDetailContainer'>
-              <li className='nav-item'>
-                <a className='nav-link' href=''>Informacion</a>
-              </li>
-            </Link>
 
-            <Link to='/cart'>
-              <img src={logo} width='50px' alt='' className='cart'></img>
-            </Link>
-          </ul>
+          <div
+            className='collapse navbar-collapse visionNav'
+            id='navbarNavDropdown'
+          >
+            <ul className='navbar-nav'>
+            <li className='nav-item'>
+                <NavLink to='/'>
+                  <h4 className='nav-link'>
+                    Home
+                  </h4>
+                </NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='ItemDetailContainer'>
+                  <h4 className='nav-link active'>
+                    Detalles
+                  </h4>
+                </NavLink>
+              </li>
+              <li className='nav-item' >
+                <NavLink to='Cart'>
+                  <img src={logo} width='50px' alt=''></img>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     )
@@ -43,6 +49,8 @@ class NavComponent extends Component {
 
 export default NavComponent
 /**
+ * className={({ isActive }) => (isActive ? 'active' : 'inactive')
+            }
  * <li className='nav-item dropdown'>
               <a
                 className='nav-link dropdown-toggle'

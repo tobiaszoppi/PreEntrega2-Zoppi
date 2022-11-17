@@ -3,9 +3,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import NavComponent from './components/ClassComponent/NavComponent';
 import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
-import Productos from './pages/Productos/Productos';
-import ItemDetailContainer from './pages/ItemDetailContainer.js/ItemDetailContainer';
-import Cart from './pages/Cart/Cart';
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer';
+import Cart from './pages/Cart/Cart.js';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
           <NavComponent></NavComponent>
           <Routes>
             <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
-            <Route path='Productos' element={<Productos></Productos>}></Route>
-            <Route path='ItemDetailContainer/:id' element={<ItemDetailContainer/>} ></Route>
+            <Route path='ItemDetailContainer' element={<ItemDetailContainer/>} ></Route>
             <Route path='cart' element={<Cart></Cart>}></Route>
+            <Route path='*' element={<NotFound></NotFound>}></Route>
           </Routes>
         </BrowserRouter>
         
