@@ -21,17 +21,3 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer
-
-/**
- * {data &&
-        data.map(data => {
-          return (
-            <Link to=''>
-              <div className='box' key={data.id}>
-                {data.nombre} <br></br>
-                {data.tipo} <br></br>
-              </div>
-            </Link>
-          )
-        })}
- */
